@@ -1,30 +1,27 @@
 import { fn } from 'storybook/test';
-
 import { Button } from './Button';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-export default {
+// 1. 객체를 변수(meta)에 할당합니다.
+const meta = {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args
   args: { onClick: fn() },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export default meta;
+
+// 2. 개별 스토리 정의
 export const Primary = {
-  args:{
-    primary:false,
-    label:'Button',
+  args: {
+    primary: false,
+    label: 'Button',
   },
 };
 
@@ -48,9 +45,17 @@ export const Small = {
   },
 };
 
+// 3. 디자인 탭이 활성화될 스토리
 export const Newstory = {
-  args:{
-    primary:true,
-    label:"Button"
-  }
+  args: {
+    primary: true,
+    label: "Button",
+  },
+  parameters: {
+    ...meta.parameters, // 기본 파라미터를 유지하면서
+    design: {           // 디자인 설정을 추가합니다.
+      type: "figma",
+      url: "https://www.figma.com/design/LoXlhNuRXFWpWC368xEZbl/Test_01?node-id=68-2&t=ADxb2yBC5HQSiAj9-1",
+    },
+  },
 };

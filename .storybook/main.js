@@ -10,11 +10,12 @@ const config = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
-    "@storybook/addon-onboarding"
+    "@storybook/addon-onboarding",
+    "@storybook/addon-designs"
   ],
   "framework": "@storybook/react-webpack5",
   "staticDirs": [
-    "..\\public"
+    "../public"
   ]
 };
 export default config;
