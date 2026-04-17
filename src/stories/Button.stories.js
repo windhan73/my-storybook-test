@@ -60,4 +60,4 @@ export const Newstory = {
   },
 };
 
-// Chromatic 빌드 강제 실행을 위한 주석 추가
+// Chromatic check 빌드 강제 실행을 위한 주석 추가
