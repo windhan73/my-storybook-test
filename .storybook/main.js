@@ -11,7 +11,7 @@ const config = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
     "@storybook/addon-onboarding",
-    "@storybook/addon-designs"
+    "storybook-addon-designs"
   ],
   "framework": "@storybook/react-webpack5",
   "staticDirs": [
